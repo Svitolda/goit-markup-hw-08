@@ -1,0 +1,45 @@
+.aside {
+    padding-bottom: 94px;
+}
+
+.aside-list {
+    display: flex;
+    gap: 30px;
+}
+
+.aside-list-item {
+    flex-basis: calc((100% - 30px) / 3);
+}
+
+.aside-title {
+    font-size: 36px;
+    line-height: calc(42/36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    margin-bottom: 50px;
+}
+
+.work-wrap {
+    position: relative;
+}
+
+.work-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-top: 27px;
+    position: absolute;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    background-color: var(--aside-bck-color);
+    opacity: 0.8;
+    margin: 0;
+}
