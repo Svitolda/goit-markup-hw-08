@@ -127,6 +127,17 @@ textarea {
   text-transform: uppercase;
   color: var(--main-text-color);
   margin-bottom: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__title {
+    max-width: 1200px;
+  }
 }
 
 .about__sutitle {
