@@ -91,8 +91,7 @@ textarea {
 }
 
 .container {
-  max-width: 1200px;
-  min-width: 480px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -721,9 +720,11 @@ textarea {
   display: flex;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .clients-list-item {
+  width: 100%;
   flex-basis: calc((100% - 30px) / 6);
 }
 
