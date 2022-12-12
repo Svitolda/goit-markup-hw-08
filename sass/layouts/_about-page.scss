@@ -3,27 +3,50 @@
 }
 
 .about {
-    padding: 94px 0;
+    // padding: 94px 0;
+    // padding-top: 60px;
+    //     padding-bottom: 60px;
+    
+    //     @media screen and (min-width: 1200px) {
+    //         padding-top: 94px;
+    //         padding-bottom: 94px;
+    //     }
 }
 
 .menu-list {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .menu-list__item {
+    width: 100%;
     flex-basis: calc((100% - 90px) / 4);
     &::before {
     display: block;
     content: "";
-    width: 270px;
-    height: 120px;
+    width: 450px;
+    height: 226px;
     background-size: 70px 70px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #F5F4FA;
     margin-bottom: 30px;
     border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    &::before {
+            width: 354px;
+             height: 120px;}
+}
+
+@media screen and (min-width: 1200px) {
+    max-width: calc((100% - 90px) / 4);
+    &::before {
+            width: 270px;
+            height: 120px;
+        }
 }
 }
 

@@ -6,7 +6,14 @@ body {
 }
 
 .section {
-  padding: 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .link {
@@ -56,6 +63,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 textarea {
@@ -83,7 +91,7 @@ textarea {
 }
 
 .container {
-  min-width: 1200px;
+  max-width: 1200px;
   min-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
@@ -485,29 +493,45 @@ textarea {
   display: flex;
 }
 
-.about {
-  padding: 94px 0;
-}
-
 .menu-list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .menu-list__item {
+  width: 100%;
   flex-basis: calc((100% - 90px) / 4);
 }
 .menu-list__item::before {
   display: block;
   content: "";
-  width: 270px;
-  height: 120px;
+  width: 450px;
+  height: 226px;
   background-size: 70px 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F5F4FA;
   margin-bottom: 30px;
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .menu-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+  .menu-list__item::before {
+    width: 354px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-list__item {
+    max-width: calc((100% - 90px) / 4);
+  }
+  .menu-list__item::before {
+    width: 270px;
+    height: 120px;
+  }
 }
 
 .icon-antena::before {
@@ -533,19 +557,44 @@ textarea {
 .aside-list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .aside-list-item {
-  flex-basis: calc((100% - 30px) / 3);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .aside-list-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aside-list-item {
+    max-width: calc((100% - 30px) / 3);
+  }
 }
 
 .aside-title {
-  font-size: 36px;
-  line-height: 1.1666666667;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .aside-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.1785714286;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aside-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.1666666667;
+  }
 }
 
 .work-wrap {
@@ -579,7 +628,7 @@ textarea {
 .team-list {
   display: flex;
   gap: 30px;
-  flex-wrap: flex;
+  flex-wrap: wrap;
 }
 
 .team-item {
@@ -590,6 +639,11 @@ textarea {
 @media screen and (min-width: 768px) {
   .team-item {
     width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    max-width: calc((100% - 90px) / 4);
   }
 }
 
