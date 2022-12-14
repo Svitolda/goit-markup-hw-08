@@ -52,9 +52,17 @@
 
 .footer .container {
     display: flex;
-    align-items: baseline;
+    // align-items: baseline;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+.footer-field{
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
 
 
 .footer-social-container {
