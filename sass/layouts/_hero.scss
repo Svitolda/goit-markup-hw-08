@@ -13,13 +13,13 @@
     max-width: 100%;
     margin: 0;
 
-        @media screen and (min-width: 768px) {
+        @include tablet {
         height: 400px;
         padding: 118px 204px;
         max-width: 768px;
     }
 
-            @media screen and (min-width: 1200px) {
+            @include desktop {
                 height: 600px;
                 padding: 200px 0;
                 max-width: 1600px;
@@ -39,14 +39,14 @@
     text-transform: uppercase;
     color: var(--white);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
             max-width: 360px;
             font-size: 26px;
             line-height: calc(42/26);
 
         }
     
-        @media screen and (min-width: 1200px) {
+        @include desktop {
             max-width: 696px;
             font-size: 44px;
             line-height: calc(60/44);
@@ -73,7 +73,7 @@
     background-color: var(--btn-hover);
 }
 
-            @media screen and (min-width: 1200px) {
+            @include desktop {
                 padding: 10px 32px;
             }
 

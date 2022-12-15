@@ -8,11 +8,11 @@
 .clients-list-item {
     flex-basis: calc((100% - 30px) / 2);
     // width: 100%;
-    @media screen and (min-width: 768px) {
+    @include tablet {
             max-width: calc((100% - 60px) / 3);
         }
     
-        @media screen and (min-width: 1200px) {
+        @include desktop {
             max-width: calc((100% - 150px) / 6);
         }
 }
@@ -33,13 +33,13 @@
     border-color: var(--accent);
     color: var(--accent);
 }
-    @media screen and (min-width: 768px) {
+    @include tablet {
          width: 226px;
         height: 92px;
         padding: 16px 60px;
 }
 
-        @media screen and (min-width: 1200px) {
+        @include desktop {
             width: 170px;
             height: 92px;
             padding: 16px 32px;
