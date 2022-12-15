@@ -16,13 +16,13 @@
         @include tablet {
         height: 400px;
         padding: 118px 204px;
-        max-width: 768px;
+        // max-width: 768px;
     }
 
             @include desktop {
                 height: 600px;
                 padding: 200px 0;
-                max-width: 1600px;
+                // max-width: 1600px;
     }
 
 }
