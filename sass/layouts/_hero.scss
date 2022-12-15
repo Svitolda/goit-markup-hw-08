@@ -8,13 +8,10 @@
     background-color: #C4C4C4;
     background-position: center;
     text-align: center;
-    padding-top: 118px;
-    padding-bottom: 118px;
-    padding: 0;
+    padding: 118px 0;
     background-size: cover;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
 
         @media screen and (min-width: 768px) {
         height: 400px;
@@ -24,8 +21,7 @@
 
             @media screen and (min-width: 1200px) {
                 height: 600px;
-                padding-top: 200px;
-                padding-bottom: 200px;
+                padding: 200px 0;
                 max-width: 1600px;
     }
 

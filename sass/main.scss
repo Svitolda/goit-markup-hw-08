@@ -1,3 +1,4 @@
+@import "./base/mixin";
 @import "./base/breakpoints";
 @import "./base/common";
 @import "./base/vars";
@@ -9,7 +10,7 @@
 @import "./components/btn";
 @import "./components/about";
 @import "./components/modal";
-@import "./components/_title";
+@import "./components/title";
 
 @import "./layouts/header"; 
 @import "./layouts/hero";

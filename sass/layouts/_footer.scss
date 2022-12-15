@@ -30,7 +30,7 @@
     transition:
         background-color var(--time) var(--cubic);
     &:hover,
-    &:focus,{
+    &:focus{
     color: var(--accent);
 }
 }
