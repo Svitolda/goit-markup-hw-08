@@ -476,7 +476,7 @@ textarea {
 .hero {
   height: 400px;
   background-color: var(--section-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mob.jpg");
   background-repeat: no-repeat;
   background-color: #C4C4C4;
   background-position: center;
@@ -486,16 +486,39 @@ textarea {
   max-width: 100%;
   margin: 0;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-color: var(--section-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mob-2x.jpg");
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-tab.jpg");
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-tab-2x.jpg");
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     height: 400px;
     padding: 118px 204px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
     padding: 200px 0;
+    max-width: 1600px;
   }
 }
 
@@ -578,7 +601,7 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .menu-list__item {
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
   .menu-list__item::before {
     width: 354px;
@@ -587,7 +610,7 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .menu-list__item {
-    max-width: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
   }
   .menu-list__item::before {
     width: 270px;

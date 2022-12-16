@@ -35,14 +35,14 @@
     border-radius: 4px;
 }
     @media screen and (min-width: 768px) {
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
     &::before {
             width: 354px;
              height: 120px;}
 }
 
     @media screen and (min-width: 1200px) {
-    max-width: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
     &::before {
             width: 270px;
             height: 120px;
@@ -54,6 +54,7 @@
 
 .icon-antena::before {
     background-image: url(../images/antena.svg);
+    
 }
 
 .icon-clock::before {
