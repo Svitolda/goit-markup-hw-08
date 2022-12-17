@@ -480,6 +480,7 @@ textarea {
   width: 100vw;
   height: 100vh;
   top: 0;
+  box-shadow: var(mob-menu-shadow);
   padding-top: 48px;
   padding-bottom: 48px;
 }
@@ -499,6 +500,9 @@ textarea {
 .menu-close-btn {
   display: block;
   margin-left: auto;
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  color: var(--accent);
 }
 
 .hero {

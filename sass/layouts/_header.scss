@@ -103,7 +103,7 @@
     height: 100vh;
     top: 0;
     // background-color: var(--white);
-    // box-shadow: var(mob-menu-shadow);
+    box-shadow: var(mob-menu-shadow);
     padding-top: 48px;
     padding-bottom: 48px;
 }
@@ -123,10 +123,11 @@
 .menu-close-btn{
     display: block;
     margin-left: auto;
-    
+
     &:hover,
     &:focus {
         color: var(--accent)
+}
 }
 
 .mob-menu-close {}
