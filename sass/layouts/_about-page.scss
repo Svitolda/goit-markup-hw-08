@@ -21,50 +21,41 @@
 
 .menu-list__item {
     width: 100%;
-    flex-basis: calc((100% - 90px) / 4);
-    &::before {
-    display: block;
-    content: "";
-    width: 450px;
-    height: 226px;
-    background-size: 70px 70px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
-    margin-bottom: 30px;
-    border-radius: 4px;
-}
+    // flex-basis: calc((100% - 90px) / 4);
+
     @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 30px) / 2);
-    &::before {
-            width: 354px;
-             height: 120px;}
 }
 
     @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 90px) / 4);
-    &::before {
-            width: 270px;
-            height: 120px;
-        }
 }
 }
 
+.image {
+    width: 450px;
+    height: 120px;
+    background-color: var(--team-section-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
 
+    @include tablet{
+        width: 354px;
+        height: 120px;
+    }
 
-.icon-antena::before {
-    background-image: url(../images/antena.svg);
-    
+    @include desktop{
+        width: 270px;
+        height: 120px;
+    }
+
 }
 
-.icon-clock::before {
-    background-image: url(../images/clock.svg);
+.icon {
+    display: block;
+    width: 70px;
+    height: 70px;
 }
 
-.icon-diagrama::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.icon-astronaut::before {
-    background-image: url(../images/astronaut.svg);
-}
