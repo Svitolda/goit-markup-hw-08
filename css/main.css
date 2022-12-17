@@ -480,10 +480,18 @@ textarea {
   width: 100vw;
   height: 100vh;
   top: 0;
-  background: var(--white);
-  box-shadow: var(mob-menu-shadow);
   padding-top: 48px;
   padding-bottom: 48px;
+}
+
+.menu-open-btn {
+  display: block;
+  margin-left: auto;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
 }
 
 .hero {
