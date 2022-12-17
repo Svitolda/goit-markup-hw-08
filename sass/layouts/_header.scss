@@ -108,7 +108,12 @@
     padding-bottom: 48px;
 }
 
-.container {}
+.mob-container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
 
 .menu-open-btn{
     display: block;
@@ -118,7 +123,10 @@
 .menu-close-btn{
     display: block;
     margin-left: auto;
-
+    
+    &:hover,
+    &:focus {
+        color: var(--accent)
 }
 
 .mob-menu-close {}
