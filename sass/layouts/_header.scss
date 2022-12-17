@@ -39,7 +39,7 @@
 .header__contacts {
     left: 0px;
     top: 0px;
-    display: flex;
+    display: none;
     gap: 50px;
 }
 
@@ -95,3 +95,42 @@
     fill: currentColor;
 }
 
+// mob-menu 
+
+.mob-menu{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background: var(--white);
+    box-shadow: var(mob-menu-shadow);
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.container {}
+
+.menu-open-btn{}
+
+.menu-close-btn{
+}
+
+.mob-menu-close {}
+
+.mob-menu__item {}
+
+.mob-menu__link {}
+
+.mob__contacts {}
+
+.mob__contacts-list {}
+
+.mob-mail {}
+
+.mob-tel {}
+
+.mob-soc {}
+
+.soc-list__item {}
+
+.mob-soc__link {}
