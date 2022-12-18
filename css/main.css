@@ -155,11 +155,14 @@ textarea {
   background: rgba(0, 0, 0, 0.2);
   top: 0;
   transition: opacity 1000ms var(--cubic), visibility 1000ms var(--cubic);
+  overflow: scroll;
+  opacity: 1;
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  overflow: auto;
+  min-width: 100%;
+  max-height: 550px;
   background: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -168,11 +171,23 @@ textarea {
   left: 50%;
   position: absolute;
   transition: transform 1000ms var(--cubic);
-  padding: 40px;
+  padding: 25px;
 }
-
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scaleX(1.5);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+    max-height: 609px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .close-dtn {
@@ -191,7 +206,7 @@ textarea {
   top: 8px;
 }
 .close-dtn:hover, .close-dtn:focus {
-  color: var(--accent);
+  fill: var(--accent);
 }
 
 .close-icon {
@@ -201,15 +216,39 @@ textarea {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 480px) {
+  .modal-title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-label {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-label:nth-of-type(4n) {
+  margin-bottom: 20px;
 }
 
 .label-title {
@@ -227,11 +266,12 @@ textarea {
 
 .modal-icon {
   position: absolute;
-  left: 5px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 11px;
   fill: currentColor;
+  transition: fill 250ms var(--cubic);
 }
 .modal-input:focus + .modal-icon {
   fill: var(--accent);
@@ -247,21 +287,33 @@ textarea {
   font-size: 14px;
   color: var(--black);
   outline: transparent;
-  padding-left: 42px;
   transition: color var(--time) var(--cubic), border-color var(--time) var(--cubic);
 }
 .modal-input:focus {
   border-color: var(--accent);
 }
 
+.form-user {
+  padding: 9px 10px 9px 30px;
+}
+@media screen and (min-width: 480px) {
+  .form-user {
+    height: 40px;
+    padding: 11px 12px 11px 42px;
+  }
+}
+
 .modal-feedback {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.modal-feedback:nth-of-type(4n) {
   margin-bottom: 20px;
 }
 
 .feedback {
   display: block;
-  width: 448px;
-  height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-bottom: 20px;
@@ -275,23 +327,48 @@ textarea {
 .feedback:focus, .feedback:hover {
   border-color: var(--accent);
 }
-.feedback::-moz-placeholder {
-  font-size: 14px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.01em;
-  color: var(--secondary-text-color);
+@media screen and (min-width: 480px) {
+  .feedback:focus, .feedback:hover {
+    height: 120px;
+  }
 }
-.feedback:-ms-input-placeholder {
+.feedback:focus::-moz-placeholder, .feedback:hover::-moz-placeholder {
   font-size: 14px;
-  line-height: 1.1666666667;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
-  color: var(--secondary-text-color);
+  color: rgba(117, 117, 117, 0.5);
 }
-.feedback::placeholder {
+.feedback:focus:-ms-input-placeholder, .feedback:hover:-ms-input-placeholder {
   font-size: 14px;
-  line-height: 1.1666666667;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
-  color: var(--secondary-text-color);
+  color: rgba(117, 117, 117, 0.5);
+}
+.feedback:focus::placeholder, .feedback:hover::placeholder {
+  font-size: 14px;
+  line-height: 1.1428571429;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 1200px) {
+  .feedback:focus::-moz-placeholder, .feedback:hover::-moz-placeholder {
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .feedback:focus:-ms-input-placeholder, .feedback:hover:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .feedback:focus::placeholder, .feedback:hover::placeholder {
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .policy-label {
@@ -299,11 +376,30 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.7142857143;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .policy-label {
+    margin-bottom: 30px;
+  }
+}
+
+.policy-text {
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .policy-text {
+    font-size: 14px;
+    line-height: 1.7142857143;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+  }
 }
 
 .policy-icon {
@@ -320,10 +416,23 @@ textarea {
 .policy-link {
   position: relative;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--accent);
+}
+@media screen and (min-width: 480px) {
+  .policy-link {
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .policy-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142857143;
+    letter-spacing: 0.03em;
+  }
 }
 .policy-link::after {
   content: " ";
