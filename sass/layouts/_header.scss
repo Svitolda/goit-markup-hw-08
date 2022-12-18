@@ -45,7 +45,7 @@
     display: none;
     
         @include tablet {
-            display: flex;
+            display: block;
             margin-right: auto;
         }
 }
@@ -63,7 +63,7 @@
     gap: 50px;
     @include tablet {
             display: flex;
-            flex-direction: column;
+            // flex-direction: column;
             justify-content: center;
             gap: 10px;
         }
@@ -74,6 +74,22 @@
             align-items: center;
             gap: 50px;
         }
+}
+
+.header__contacts{
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+        @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
 }
 
 .menu__link {
@@ -89,6 +105,13 @@
     &:hover,
     &:focus{
             color: var(--accent);
+        }
+        @include tablet{
+            display: flex;
+        }
+
+        @include desktop{
+            display: flex;
         }
     &.current.link::after {
     display: block;
@@ -113,8 +136,8 @@
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
     display: none;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     align-items: center;
     gap: 10px;
     transition: color var(--time) var(--cubic);
@@ -130,6 +153,8 @@
         letter-spacing: 0.02em;
         color: var(--secondary-text-color);
         transition: color var(--time) var(--cubic);
+        // padding-top: 32px;
+        //     padding-bottom: 32px;
 
         &:hover,
         &:focus {
