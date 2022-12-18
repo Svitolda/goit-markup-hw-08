@@ -13,7 +13,20 @@
 }
 
 .header__logo{
-    margin-right: 93px;
+    // margin-right: 93px;
+    padding: 16px 0;
+    
+        @include tablet {
+            margin-right: 87px;
+            padding-top: 26px;
+            padding-bottom: 26px;
+        }
+    
+        @include desktop {
+            margin-right: 93px;
+            padding-top: 24px;
+            padding-bottom: 25px;
+        }
 }
 
 .web {
@@ -24,10 +37,17 @@
     display: flex;
     align-items: center;
     height: 80px;
+    justify-content: space-between;
 }
 
 .header__navigation {
     margin-right: auto;
+    display: none;
+    
+        @include tablet {
+            display: flex;
+            margin-right: auto;
+        }
 }
 
 
@@ -41,6 +61,19 @@
     top: 0px;
     display: none;
     gap: 50px;
+    @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+    
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+        }
 }
 
 .menu__link {
@@ -50,8 +83,9 @@
     letter-spacing: 0.02em;
     color: var(--main-text-colo);
     position: relative;
-    display: block;
+    display: none;
     padding: 32px 0;
+    transition: color 250ms var(--cubic);
     &:hover,
     &:focus{
             color: var(--accent);
@@ -78,7 +112,7 @@
     line-height: calc(16/14);
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
-    display: flex;
+    display: none;
     padding-top: 32px;
     padding-bottom: 32px;
     align-items: center;
@@ -88,12 +122,56 @@
     &:focus {
     color: var(--accent);
 }
+    @include tablet {
+        display: inline-flex;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: calc(16/14);
+        letter-spacing: 0.02em;
+        color: var(--secondary-text-color);
+        transition: color var(--time) var(--cubic);
+
+        &:hover,
+        &:focus {
+            color: var(--accent);
+        }
 }
 
-.icon-mail,
-.icon-tel {
-    fill: currentColor;
+        @include desktop {
+            padding: 32px 0;
 }
+}
+
+.icon-mail{
+    @include tablet {
+            width: 14px;
+            height: 10px;
+            fill: currentColor;
+            margin-right: 8px;
+        }
+    
+        @include desktop {
+            width: 16px;
+            height: 12px;
+            margin-right: 10px;
+        }
+}
+.icon-tel {
+         @include tablet {
+            width: 10px;
+            height: 14px;
+            fill: currentColor;
+            margin-right: 8px;
+        }
+    
+            @include desktop {
+            width: 10px;
+            height: 16px;
+            margin-right: 10px;
+            }
+}
+
+
 
 // mob-menu 
 
@@ -110,34 +188,42 @@
     
 }
 
-.mob-container {
+.mob-menu__container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
+    @include mobile {
+            padding-left: 40px;
+        }
+    
+        @include tablet {
+            display: none;
+        }
 }
 
-.mob-menu-up{
-    margin-bottom: auto;
+.mob-menu-bottom{
+    flex-direction: column;
 }
 
 .menu-open-btn{
-    display: block;
-    margin-left: auto;
-    cursor: pointer;
-    font-family: inherit;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
-    &:hover,
-    &:focus {
-            color: var(--accent)
+    width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: fill 250ms var(--cubic);
+    
+        &:focus {
+            fill: var(--accent-color);
+        }
+    
+        @include tablet {
+            display: none;
         }
 }
 
@@ -149,15 +235,19 @@
     position:absolute;
     top: 10px;
     right: 15px;
+    width: 40px;
+    height: 40px;
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     border: none;
-    &:hover,
     &:focus {
             color: var(--accent)
         }
+            @include tablet {
+                    display: none;
+                }
 }
 
 .mob-menu-close .mob-menu-open {
@@ -182,7 +272,10 @@
     line-height: calc(47/40);
     letter-spacing: 0.02em;
     color: var(--main-text-colo);
-    
+    transition: color var(--time) var(--cubic);
+    &:focus {
+            color: var(--accent)
+        }
 }
 
 .mob-menu__link.current {
@@ -195,7 +288,7 @@
     margin-bottom: 64px;
 }
 
-.mob__contacts-list {
+.mob__contacts-list:not(:last-child) {
     margin-bottom: 32px;
 }
 
@@ -214,6 +307,9 @@
         line-height: calc(28/24);
         letter-spacing: 0.02em;
         color: var(--secondary-text-color);
+    @include mobile {
+            font-size: 34px;
+        }
 }
 
 .mob-menu-soc {}
@@ -224,7 +320,14 @@
     gap: 20px;
 }
 
-.soc-list__item {}
+.soc-list__item:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.soc-list__item:not(:first-child) {
+    padding-left: 10px;
+}
 
 .mob-soc__link {
     font-weight: 500;
@@ -232,4 +335,8 @@
         line-height: 22px;
         letter-spacing: 0.02em;
         color: #2196F3;
+
+    @include mobile {
+            font-size: 18px;
+        }
 }
