@@ -1372,13 +1372,13 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white);
+  margin-bottom: 20px;
 }
 
 .footer-social-list {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .footer-list-item {
@@ -1427,7 +1427,6 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 @media screen and (min-width: 1200px) {
   .subscribe-form {
@@ -1449,6 +1448,7 @@ textarea {
   color: var(--secondary-text-color);
   outline: transparent;
   padding-left: 16px;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer-input {
@@ -1457,7 +1457,7 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .footer-input {
-    margin-top: 20px;
+    margin-bottom: 0;
     max-width: 358px;
   }
 }
