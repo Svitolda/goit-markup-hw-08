@@ -704,11 +704,12 @@ textarea {
   width: 100vw;
   height: 100vh;
   top: 0;
+  left: 0;
   background-color: var(--white);
   box-shadow: var(mob-menu-shadow);
   padding-top: 48px;
-  padding-left: 40px;
   padding-bottom: 48px;
+  z-index: 5;
 }
 
 .mob-menu__container {
