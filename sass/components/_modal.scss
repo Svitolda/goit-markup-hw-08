@@ -221,6 +221,7 @@
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+    margin-bottom: 10px;
         @include mobile {
                 margin-bottom: 30px;
             }
